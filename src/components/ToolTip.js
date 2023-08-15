@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 
 let ToolTip= (props)=>{
-    let [hover,Sethover]=useState(false)
+    let [hover,Sethover]=useState({display: 'none'})
 return(
     <div>
-       { hover && (<h2 className='tooltiptext'><div>{props.text}</div></h2>) }
-        <p className='tooltip'><div onMouseEnter={()=>Sethover(true)} onMouseLeave={()=>Sethover(false)}>{props.child}</div></p>
+       <h2 className='tooltiptext' style={hover}><div>{props.text}</div></h2>
+        <p className='tooltip'><div onMouseEnter={()=>Sethover({display: 'block'})} onMouseLeave={()=>Sethover({display: 'none'})}>{props.child}</div></p>
     </div>
 )
 }
