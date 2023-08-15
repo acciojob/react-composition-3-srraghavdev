@@ -4,8 +4,8 @@ let ToolTip= (props)=>{
     let [hover,Sethover]=useState(false)
 return(
     <div>
-       { hover && (<p className='tooltiptext'>{props.text}</p>) }
-        <p className='tootip' onMouseOver={()=>Sethover(true)} onMouseOut={()=>Sethover(false)}>{props.child}</p>
+       { hover && (<h2 className='tooltiptext'><div>{props.text}</div></h2>) }
+        <p className='tootip' onMouseOver={()=>Sethover(true)} onMouseOut={()=>Sethover(false)}><div>{props.child}</div></p>
     </div>
 )
 }
