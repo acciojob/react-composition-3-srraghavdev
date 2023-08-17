@@ -5,7 +5,7 @@ let ToolTip= (props)=>{
 return(
     <div>
        <h2 className='tooltiptext' style={hover}><div>{props.text}</div></h2>
-        <p className='tooltip'><div onMouseEnter={()=>Sethover({display: 'block'})} onMouseLeave={()=>Sethover({display: 'none'})}>{props.child}</div></p>
+        <p className='tooltip'><div onMouseEnter={()=>Sethover({display: 'block'})} onMouseLeave={()=>Sethover({display: 'none'})}>{props.children}</div></p>
     </div>
 )
 }
